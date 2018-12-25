@@ -1,0 +1,45 @@
+{
+  "name": "<%= packageName %>",
+  "version": "1.0.0",
+  "description": "This is <%= name %>, an Adobe XD Plugin.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -w src -w static -w webpack.config.js -e js,jsx,css,scss,html,json,png -x npm run deploy",
+    "clean": "rimraf build/*",
+    "build": "npm run validate && webpack --mode development",
+    "locate": "npm run build && xdpm install -o build",
+    "deploy": "npm run clean && npm run locate",
+    "package": "npm run validate && npm run clean && webpack --mode production && xdpm package build",
+    "validate": "xdpm validate static",
+    "lint": "eslint 'src/**/*.{js,jsx}' 'webpack.config.js'",
+    "lint-fix": "eslint  --fix 'src/**/*.{js,jsx}' 'webpack.config.js'"
+  },
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@adobe/xdpm": "^1.1.2",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/runtime": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.0.1",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "nodemon": "^1.18.9",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

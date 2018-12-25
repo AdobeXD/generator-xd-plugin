@@ -1,0 +1,43 @@
+{
+  "name": "<%= name %>",
+  "id": "REPLACE_YOUR_ID_LIKE_<%= id %>",
+  "version": "1.0.0",
+  "description": "This is <%= name %>",
+  "icons": [
+    {
+      "width": 96,
+      "height": 96,
+      "path": "images/icon.png"
+    }
+  ],
+  "host": {
+    "app": "XD",
+    "minVersion": "13.0.0"
+  },
+  "uiEntryPoints": [
+    {
+      "type": "menu",
+      "label": {
+        "en": "<%= name %>",
+        "ja": "<%= name %>",
+        "fr": "<%= name %>",
+        "de": "<%= name %>",
+        "es": "<%= name %>",
+        "it": "<%= name %>",
+        "ko": "<%= name %>",
+        "pt": "<%= name %>",
+        "da": "<%= name %>",
+        "no": "<%= name %>",
+        "nl": "<%= name %>",
+        "zh": "<%= name %>",
+        "ru": "<%= name %>",
+        "fi": "<%= name %>",
+        "pl": "<%= name %>",
+        "uk": "<%= name %>",
+        "sv": "<%= name %>",
+        "default": "<%= name %>"
+      },
+      "commandId": "menuCommand"
+    }
+  ]
+}

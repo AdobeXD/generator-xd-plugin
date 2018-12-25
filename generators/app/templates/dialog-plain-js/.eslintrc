@@ -1,0 +1,20 @@
+{
+	"extends": [
+		"airbnb"
+	],
+	"plugins": [],
+	"parserOptions": {},
+	"env": {
+		"browser": true
+	},
+	"globals": {
+		"scenegraph": true
+	},
+	"rules": {
+		"indent": ["error", 4],
+		"no-unused-vars": "warn",
+		"no-console": "warn",
+		"import/no-unresolved": ["warn", { "ignore": ["secenegraph", "commands"] }],
+		"no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["selection"] }]
+	}
+}
