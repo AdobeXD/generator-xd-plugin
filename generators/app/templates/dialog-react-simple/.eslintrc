@@ -10,6 +10,7 @@
   "globals": {},
   "rules": {
     "indent": ["error", 2],
+    "react/jsx-indent": ["error", 2],
     "no-unused-vars": "off",
     "no-console": "off",
     "import/no-unresolved": ["warn",
@@ -29,6 +30,17 @@
         "ignorePropertyModificationsFor": [
           "selection"
         ]
+      }
+    ],
+    "import/order": ["off", "always"],
+    "react/forbid-prop-types": ["off", "always"],
+    "react/prop-types": ["warn", "always"],
+    "react/destructuring-assignment": ["warn", "always"],
+    "react/button-has-type": ["error",
+      {
+        "button": true,
+        "submit": true,
+        "reset": true
       }
     ]
   }

@@ -2,7 +2,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/main.js'),
+  entry: path.resolve(__dirname, 'src/main.jsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'main.js',
@@ -22,7 +22,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
@@ -38,6 +38,7 @@ module.exports = {
                 regenerator: true,
               },
             ],
+            '@babel/transform-react-jsx',
           ],
         },
       },
