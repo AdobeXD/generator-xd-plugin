@@ -1,9 +1,0 @@
-{
-  "generator-node": {
-    "promptValues": {
-      "authorName": "Yoshiki Takeoka",
-      "authorEmail": "takeoka@adobe.com",
-      "authorUrl": "https://adobexdplatform.com/"
-    }
-  }
-}

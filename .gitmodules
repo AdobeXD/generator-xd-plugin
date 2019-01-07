@@ -1,4 +1,0 @@
-[submodule "generators/app/templates"]
-	path = generators/app/templates
-	url = git@git.corp.adobe.com:takeoka/xd-extensibility-api-playground.git
-gi
