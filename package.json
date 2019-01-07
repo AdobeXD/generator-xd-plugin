@@ -1,89 +1,89 @@
 {
-  "name": "generator-xd-plugin",
-  "version": "1.0.0",
-  "description": "Yeoman generator for creating Adobe XD Plugin",
-  "homepage": "http://github.com/adobexd/generator-xd-plugin",
-  "author": {
-    "name": "Adobe XD",
-    "url": "https://adobexdplatform.com/"
-  },
-  "files": [
-    "generators"
-  ],
-  "main": "generators/index.js",
-  "keywords": [
-    "AdobeXD",
-    "XD",
-    "Plugin",
-    "yeoman-generator"
-  ],
-  "devDependencies": {
-    "coveralls": "^3.0.0",
-    "eslint": "^5.9.0",
-    "eslint-config-prettier": "^3.0.1",
-    "eslint-config-xo": "^0.24.2",
-    "eslint-plugin-prettier": "^2.6.0",
-    "husky": "^0.14.3",
-    "jest": "^23.5.0",
-    "lint-staged": "^7.2.2",
-    "prettier": "^1.11.1",
-    "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0"
-  },
-  "engines": {
-    "npm": ">= 5.5.1"
-  },
-  "dependencies": {
-    "ajv": "^6.5.5",
-    "chalk": "^2.1.0",
-    "lodash": "^4.17.11",
-    "uuid": "^3.3.2",
-    "yeoman-generator": "^2.0.1",
-    "yosay": "^2.0.1"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
+    "name": "generator-xd-plugin",
+    "version": "1.0.1",
+    "description": "Yeoman generator for creating Adobe XD Plugin",
+    "homepage": "http://github.com/adobexd/generator-xd-plugin",
+    "author": {
+        "name": "Adobe XD",
+        "url": "https://adobexdplatform.com/"
     },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
+    "files": [
+        "generators"
+    ],
+    "main": "generators/index.js",
+    "keywords": [
+        "AdobeXD",
+        "XD",
+        "Plugin",
+        "yeoman-generator"
+    ],
+    "devDependencies": {
+        "coveralls": "^3.0.0",
+        "eslint": "^5.9.0",
+        "eslint-config-prettier": "^3.0.1",
+        "eslint-config-xo": "^0.24.2",
+        "eslint-plugin-prettier": "^2.6.0",
+        "husky": "^0.14.3",
+        "jest": "^23.5.0",
+        "lint-staged": "^7.2.2",
+        "prettier": "^1.11.1",
+        "yeoman-assert": "^3.1.0",
+        "yeoman-test": "^1.7.0"
     },
-    "plugins": [
-      "prettier"
-    ]
-  },
-  "scripts": {
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/adobexd/generator-xd-plugin"
-  },
-  "license": "Apache-2.0"
+    "engines": {
+        "npm": ">= 5.5.1"
+    },
+    "dependencies": {
+        "ajv": "^6.5.5",
+        "chalk": "^2.1.0",
+        "lodash": "^4.17.11",
+        "uuid": "^3.3.2",
+        "yeoman-generator": "^2.0.1",
+        "yosay": "^2.0.1"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "git add"
+        ],
+        "*.json": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "xo",
+            "prettier"
+        ],
+        "env": {
+            "jest": true,
+            "node": true
+        },
+        "rules": {
+            "prettier/prettier": [
+                "error",
+                {
+                    "singleQuote": true,
+                    "printWidth": 90
+                }
+            ]
+        },
+        "plugins": [
+            "prettier"
+        ]
+    },
+    "scripts": {
+        "pretest": "eslint .",
+        "precommit": "lint-staged",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/adobexd/generator-xd-plugin"
+    },
+    "license": "Apache-2.0"
 }
