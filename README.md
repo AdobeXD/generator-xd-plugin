@@ -55,6 +55,9 @@ npm run validate
 
 manifest.json is in `static` folder.
 
+## yo xd-plugin DEMO
+
+![](doc/generator-xd-plugin-demo-10sec.gif)
 
 ## Contributing
 
