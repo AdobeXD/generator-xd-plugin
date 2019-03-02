@@ -1,4 +1,5 @@
-dist/
 .git/
 node_modules/
 docs/
+build/
+package-lock.json

@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "airbnb"
-  ],
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "plugins": [],
   "parserOptions": {},
   "env": {
@@ -9,26 +7,26 @@
   },
   "globals": {},
   "rules": {
-    "indent": ["error", 2],
-    "no-unused-vars": "off",
-    "no-console": "off",
-    "import/no-unresolved": ["warn",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "import/no-unresolved": [
+      "warn",
       {
-        "ignore": [
-          "application",
-          "clipboard",
-          "commands",
-          "secenegraph",
-          "uxp"
-        ]
+        "ignore": ["application", "clipboard", "commands", "secenegraph", "uxp"]
       }
     ],
-    "no-param-reassign": ["error",
+    "no-param-reassign": [
+      "error",
       {
         "props": true,
-        "ignorePropertyModificationsFor": [
-          "selection"
-        ]
+        "ignorePropertyModificationsFor": ["selection"]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5"
       }
     ]
   }

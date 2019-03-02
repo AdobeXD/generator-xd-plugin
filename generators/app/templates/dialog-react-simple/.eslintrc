@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "airbnb"
-  ],
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "plugins": [],
   "parserOptions": {},
   "env": {
@@ -9,38 +7,39 @@
   },
   "globals": {},
   "rules": {
-    "indent": ["error", 2],
-    "react/jsx-indent": ["error", 2],
-    "no-unused-vars": "off",
-    "no-console": "off",
-    "import/no-unresolved": ["warn",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "import/no-unresolved": [
+      "warn",
       {
-        "ignore": [
-          "application",
-          "clipboard",
-          "commands",
-          "secenegraph",
-          "uxp"
-        ]
+        "ignore": ["application", "clipboard", "commands", "secenegraph", "uxp"]
       }
     ],
-    "no-param-reassign": ["error",
+    "no-param-reassign": [
+      "error",
       {
         "props": true,
-        "ignorePropertyModificationsFor": [
-          "selection"
-        ]
+        "ignorePropertyModificationsFor": ["selection"]
       }
     ],
     "import/order": ["off", "always"],
-    "react/forbid-prop-types": ["off", "always"],
+    "react/forbid-prop-types": ["warn", "always"],
     "react/prop-types": ["warn", "always"],
     "react/destructuring-assignment": ["warn", "always"],
-    "react/button-has-type": ["error",
+    "react/button-has-type": [
+      "error",
       {
         "button": true,
         "submit": true,
         "reset": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "printWidth": 80
       }
     ]
   }

@@ -17,7 +17,6 @@ const PropTypes = require('prop-types');
 const { Color, Text } = require('scenegraph');
 const style = require('./styles.css');
 
-
 let dialogInstance;
 
 function drawMessageOnScenegraph(selection, messageText) {
@@ -25,17 +24,22 @@ function drawMessageOnScenegraph(selection, messageText) {
 
   textNode.text = messageText;
   const textColor = new Color({
-    r: 255, g: 0, b: 0, a: 255,
+    r: 255,
+    g: 0,
+    b: 0,
+    a: 255,
   });
 
-  textNode.styleRanges = [{
-    length: textNode.text.length,
-    fill: textColor,
-    fontSize: 72,
-    fontFamily: 'Helvetica Neue',
-    underline: false,
-    fontStyle: 'Bold',
-  }];
+  textNode.styleRanges = [
+    {
+      length: textNode.text.length,
+      fill: textColor,
+      fontSize: 72,
+      fontFamily: 'Helvetica Neue',
+      underline: false,
+      fontStyle: 'Bold',
+    },
+  ];
 
   selection.insertionParent.addChild(textNode);
 
@@ -44,7 +48,6 @@ function drawMessageOnScenegraph(selection, messageText) {
   const nodeTopLeft = { x: nodeBounds.x, y: nodeBounds.y };
   textNode.placeInParentCoordinates(nodeTopLeft, { x: 0, y: 0 });
 }
-
 
 class MessageForm extends React.Component {
   constructor(props) {
@@ -56,7 +59,6 @@ class MessageForm extends React.Component {
     this.onSubmitButtonClick = this.onSubmitButtonClick.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-
 
   onInputChange(e) {
     this.setState({ message: e.target.value });
@@ -108,8 +110,20 @@ class MessageForm extends React.Component {
         </label>
         <p>{`Message ${message}`}</p>
         <footer>
-          <button type="button" uxp-variant="primary" onClick={this.onCancelButtonClick}>Cancel</button>
-          <button type="submit" uxp-variant="cta" onClick={this.onSubmitButtonClick}>Submit</button>
+          <button
+            type="button"
+            uxp-variant="primary"
+            onClick={this.onCancelButtonClick}
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            uxp-variant="cta"
+            onClick={this.onSubmitButtonClick}
+          >
+            Submit
+          </button>
         </footer>
       </form>
     );
@@ -119,7 +133,10 @@ class MessageForm extends React.Component {
 function initializeDialog(selection) {
   //  create the dialog
   const dialogNode = document.createElement('dialog');
-  ReactDOM.render(<MessageForm dialog={dialogNode} selection={selection} />, dialogNode);
+  ReactDOM.render(
+    <MessageForm dialog={dialogNode} selection={selection} />,
+    dialogNode
+  );
   return dialogNode;
 }
 

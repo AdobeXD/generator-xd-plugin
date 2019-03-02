@@ -13,17 +13,22 @@ function drawMessageOnScenegraph(selection, messageText) {
 
   textNode.text = messageText;
   const textColor = new Color({
-    r: 255, g: 0, b: 0, a: 255,
+    r: 255,
+    g: 0,
+    b: 0,
+    a: 255,
   });
 
-  textNode.styleRanges = [{
-    length: textNode.text.length,
-    fill: textColor,
-    fontSize: 72,
-    fontFamily: 'Helvetica Neue',
-    underline: false,
-    fontStyle: 'Bold',
-  }];
+  textNode.styleRanges = [
+    {
+      length: textNode.text.length,
+      fill: textColor,
+      fontSize: 72,
+      fontFamily: 'Helvetica Neue',
+      underline: false,
+      fontStyle: 'Bold',
+    },
+  ];
 
   selection.insertionParent.addChild(textNode);
 
@@ -32,7 +37,6 @@ function drawMessageOnScenegraph(selection, messageText) {
   const nodeTopLeft = { x: nodeBounds.x, y: nodeBounds.y };
   textNode.placeInParentCoordinates(nodeTopLeft, { x: 0, y: 0 });
 }
-
 
 function createForm(dialog, selection) {
   //  create the form element
@@ -53,7 +57,6 @@ function createForm(dialog, selection) {
   textInput.id = 'messageInput';
   form.appendChild(textInput);
 
-
   //  create a footer to hold your form submit and cancel buttons
   const footer = document.createElement('footer');
   form.appendChild(footer);
@@ -64,7 +67,7 @@ function createForm(dialog, selection) {
   submitButton.type = 'submit';
   submitButton.textContent = 'Submit';
 
-  submitButton.onclick = async (e) => {
+  submitButton.onclick = async e => {
     // TODO
     // Call e.preventDefault()
     // otherwise, dialog.close() is called with nothing; will fix docs
@@ -78,7 +81,7 @@ function createForm(dialog, selection) {
   cancelButton.uxpVariant = 'primary';
   cancelButton.textContent = 'Cancel';
 
-  cancelButton.onclick = (e) => {
+  cancelButton.onclick = e => {
     // TODO
     // Call e.preventDefault()
     // otherwise, dialog.close() is called with nothing; will fix docs
@@ -89,7 +92,7 @@ function createForm(dialog, selection) {
 
   // handle dialog by ENTER key
   // Will work soon.
-  form.onsubmit = (e) => {
+  form.onsubmit = e => {
     // TODO
     // otherwise, dialog.close() is called with nothing; will fix docs
     e.preventDefault();
@@ -102,7 +105,6 @@ function createForm(dialog, selection) {
 
   return form;
 }
-
 
 function initializeDialog(selection) {
   //  create the dialog

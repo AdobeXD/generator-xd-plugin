@@ -68,6 +68,8 @@ module.exports = class extends Generator {
   writing() {
     let projectPath = this.props.name;
     this.destinationRoot(projectPath);
+    // Initialize git for husky
+    this.spawnCommandSync('git', ['init', '--quiet']);
 
     const params = {
       name: this.props.name,
