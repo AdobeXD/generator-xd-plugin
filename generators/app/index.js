@@ -52,7 +52,7 @@ module.exports = class extends Generator {
         name: 'minVersion',
         message: 'Choose minimum version of XD supported by your Plugin:',
         choices: Object.values(answers.version),
-        default: answers.version[`13`]
+        default: answers.version[`16`]
       },
       {
         type: 'list',
