@@ -10,7 +10,7 @@ This sample shows how to achieve the following UI
 npm install
 ```
 
-## Deploy plugin to `Develop` folder 
+## Deploy plugin to `Develop` folder
 
 Deploy the plugin and monitor updates of files.
 
@@ -18,7 +18,7 @@ Deploy the plugin and monitor updates of files.
 npm start
 ```
 
-## Usage 
+## Usage
 
 1. Reload plugins: `Plugins` > `Development` > `Reload Plugins` or press `shift + command(ctrl) + R` keys.
 2. Run the plugin: `Plugins` > `<%= name %>`
