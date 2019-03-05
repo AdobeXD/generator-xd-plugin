@@ -73,7 +73,7 @@ function createForm(dialog) {
     // otherwise, dialog.close() is called with nothing; will fix docs
     e.preventDefault();
     const message = dialog.querySelector('#messageInput').value;
-    drawMessageOnScenegraph(selection, message);
+    drawMessageOnScenegraph(message);
     dialog.close('submit');
   };
 
