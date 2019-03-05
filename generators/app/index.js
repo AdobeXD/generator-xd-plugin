@@ -15,16 +15,13 @@
  */
 
 'use strict';
+const answers = require('../prompts/answers');
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const _ = require('lodash');
 const uuid = require('uuid/v4');
 var path = require('path');
-
-const noui = `Plugin without dialog`;
-const plain = `Plugin with dialog by plain javascript`;
-const react = `Plugin with dialog by React`;
 
 module.exports = class extends Generator {
   _copyAllFiles(params, templateDir) {
@@ -48,14 +45,21 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'name',
         message: 'What is Your XD plugin name?',
-        default: 'My Adobe XD Plug-in'
+        default: answers.projectDisplayName
+      },
+      {
+        type: 'list',
+        name: 'minVersion',
+        message: 'Choose minimum version of XD supported by your Plugin:',
+        choices: Object.values(answers.version),
+        default: answers.version[`13`]
       },
       {
         type: 'list',
         name: 'scriptType',
         message: 'Choose type of the plugin:',
-        choices: [react, plain, noui],
-        default: react
+        choices: Object.values(answers.framework).map(x => x.dialog),
+        default: answers.framework.react
       }
     ];
 
@@ -77,19 +81,11 @@ module.exports = class extends Generator {
       packageName: _.snakeCase(this.props.name)
     };
 
-    switch (this.props.scriptType) {
-      case noui:
-        this._copyAllFiles(params, 'no-dialog');
-        break;
-      case plain:
-        this._copyAllFiles(params, 'dialog-plain-js-simple');
-        break;
-      case react:
-        this._copyAllFiles(params, 'dialog-react-simple');
-        break;
-      default:
-        break;
-    }
+    let framework = Object.entries(answers.framework).filter(
+      entries => entries[1].dialog === this.props.scriptType
+    )[0][1];
+
+    this._copyAllFiles(params, path.join(this.props.minVersion, framework.path));
   }
 
   install() {
