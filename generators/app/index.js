@@ -49,13 +49,6 @@ module.exports = class extends Generator {
       },
       {
         type: 'list',
-        name: 'minVersion',
-        message: 'Choose minimum version of XD supported by your Plugin:',
-        choices: Object.values(answers.version),
-        default: answers.version[`16`]
-      },
-      {
-        type: 'list',
         name: 'scriptType',
         message: 'Choose type of the plugin:',
         choices: Object.values(answers.framework).map(x => x.dialog),
@@ -77,7 +70,7 @@ module.exports = class extends Generator {
 
     const params = {
       name: this.props.name,
-      id: uuid().substr(0, 8),
+      i: uuid().substr(0, 8),
       packageName: _.snakeCase(this.props.name)
     };
 
@@ -85,7 +78,7 @@ module.exports = class extends Generator {
       entries => entries[1].dialog === this.props.scriptType
     )[0][1];
 
-    this._copyAllFiles(params, path.join(this.props.minVersion, framework.path));
+    this._copyAllFiles(params, framework.path);
   }
 
   install() {
