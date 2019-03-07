@@ -34,7 +34,7 @@
   ],
   "host": {
     "app": "XD",
-    "minVersion": "17.0"
+    "minVersion": "16.0"
   },
   "uiEntryPoints": [
     {
