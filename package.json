@@ -12,8 +12,10 @@
   ],
   "main": "generators/index.js",
   "keywords": [
+    "Adobe",
     "AdobeXD",
     "XD",
+    "XDPlugin",
     "Plugin",
     "yeoman-generator"
   ],
