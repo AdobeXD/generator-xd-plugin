@@ -12,6 +12,11 @@
   "helpUrl": "https://mywebsite.com/help",
   "icons": [
     {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon@0.5x.png"
+    },
+    {
       "width": 48,
       "height": 48,
       "path": "images/icon@1x.png"

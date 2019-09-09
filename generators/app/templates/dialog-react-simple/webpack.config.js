@@ -31,18 +31,18 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env'],
-          plugins: [
-            ['@babel/plugin-transform-modules-commonjs'],
+          presets: [
             [
-              '@babel/plugin-transform-runtime',
+              '@babel/preset-env',
               {
-                // Plugin ReferenceError: regeneratorRuntime is not defined
-                regenerator: true,
+                targets: {
+                  node: 'current',
+                },
+                modules: 'commonjs',
               },
             ],
-            '@babel/transform-react-jsx',
           ],
+          plugins: ['@babel/transform-react-jsx'],
         },
       },
       {

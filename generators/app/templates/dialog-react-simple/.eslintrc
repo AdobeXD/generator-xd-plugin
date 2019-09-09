@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb", "plugin:prettier/recommended"],
   "plugins": [],
+  "parser": "babel-eslint",
   "parserOptions": {},
   "env": {
     "browser": true
@@ -23,8 +24,8 @@
       }
     ],
     "import/order": ["off", "always"],
-    "react/forbid-prop-types": ["warn", "always"],
-    "react/prop-types": ["warn", "always"],
+    "react/forbid-prop-types": ["warn", { "forbid": ["any"] }],
+    "react/prop-types": ["warn"],
     "react/destructuring-assignment": ["warn", "always"],
     "react/button-has-type": [
       "error",

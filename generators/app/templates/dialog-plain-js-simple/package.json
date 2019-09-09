@@ -20,8 +20,10 @@
   "devDependencies": {
     "@adobe/xdpm": "^3.0.1",
     "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/runtime": "^7.6.0",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
