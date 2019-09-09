@@ -20,28 +20,28 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "coveralls": "^3.0.0",
-    "eslint": "^5.9.0",
-    "eslint-config-prettier": "^3.0.1",
-    "eslint-config-xo": "^0.24.2",
-    "eslint-plugin-prettier": "^2.6.0",
-    "husky": "^0.14.3",
-    "jest": "^24.1.0",
-    "lint-staged": "^7.2.2",
-    "prettier": "^1.11.1",
-    "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0"
+    "coveralls": "^3.0.6",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^2.0.0"
   },
   "engines": {
     "npm": ">= 5.5.1"
   },
   "dependencies": {
-    "ajv": "^6.5.5",
-    "chalk": "^2.1.0",
-    "lodash": "^4.17.11",
-    "uuid": "^3.3.2",
-    "yeoman-generator": "^2.0.1",
-    "yosay": "^2.0.1"
+    "ajv": "^6.10.2",
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.15",
+    "uuid": "^3.3.3",
+    "yeoman-generator": "^4.0.2",
+    "yosay": "^2.0.2"
   },
   "jest": {
     "testEnvironment": "node"
