@@ -1,0 +1,61 @@
+{
+  "name": "<%= name %>",
+  "id": "<%= i %>",
+  "version": "1.0.0",
+  "description": "This is <%= name %>",
+  "summary": "Quick start project.",
+  "releaseNotes": "First release",
+  "keywords": ["utility", "productivity"],
+  "languages": ["en", "de", "fr", "ja", "ko", "zh", "es", "pt"],
+  "website": "https://mywebsite.com",
+  "author": "Your Name",
+  "helpUrl": "https://mywebsite.com/help",
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon@0.5x.png"
+    },
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@1x.png"
+    },
+    {
+      "width": 96,
+      "height": 96,
+      "path": "images/icon@2x.png"
+    },
+    {
+      "width": 144,
+      "height": 144,
+      "path": "images/icon@3x.png"
+    },
+    {
+      "width": 192,
+      "height": 192,
+      "path": "images/icon@4x.png"
+    }
+  ],
+  "host": {
+    "app": "XD",
+    "minVersion": "21.0"
+  },
+  "uiEntryPoints": [
+    {
+      "type": "panel",
+      "label": {
+        "en": "<%= name %>",
+        "de": "<%= name %>",
+        "fr": "<%= name %>",
+        "ja": "<%= name %>",
+        "ko": "<%= name %>",
+        "zh": "<%= name %>",
+        "es": "<%= name %>",
+        "pt": "<%= name %>",
+        "default": "<%= name %>"
+      },
+      "panelId": "enlargeRectangle"
+    }
+  ]
+}

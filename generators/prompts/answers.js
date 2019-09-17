@@ -12,6 +12,10 @@ module.exports = {
     noui: {
       path: 'no-dialog',
       dialog: 'Plugin without dialog'
+    },
+    panelplain: {
+      path: 'panel-plain-js-simple',
+      dialog: 'Plugin with Panel UI (for XD 21.0+)'
     }
   }
 };

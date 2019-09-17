@@ -1,0 +1,71 @@
+{
+  "name": "<%= packageName %>",
+  "version": "1.0.0",
+  "description": "This is <%= name %>, an Adobe XD Plugin.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug:install": "npm run deploy",
+    "debug:watch": "nodemon -w src -w static -w webpack.config.js -e js,jsx,css,scss,htm,html,json,png,jpg,jpeg -x npm run deploy",
+    "start": "npm run debug:watch",
+    "clean": "rimraf build/*",
+    "build": "npm run clean && npm run validate && webpack --mode development",
+    "compile": "npm run clean && npm run validate && webpack --mode production",
+    "deploy": "npm run build && xdpm install -o build",
+    "package": "npm run compile && xdpm package build",
+    "precommit": "lint-staged",
+    "validate": "xdpm validate static"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@adobe/xdpm": "^3.0.1",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.1.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "webpack.config.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{css}": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "**/*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    ".eslintrc": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
