@@ -18,7 +18,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@adobe/xdpm": "^3.0.1",
+    "@adobe/xdpm": "^4.0.0",
     "@babel/core": "^7.6.0",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.6.0",
