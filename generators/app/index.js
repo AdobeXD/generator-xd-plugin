@@ -20,7 +20,7 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const _ = require('lodash');
-const uuid = require('uuid/v4');
+const { v4: uuid } = require('uuid');
 var path = require('path');
 
 module.exports = class extends Generator {
