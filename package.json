@@ -1,6 +1,6 @@
 {
   "name": "generator-xd-plugin",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "description": "Yeoman generator for creating Adobe XD Plugin",
   "homepage": "http://github.com/adobexd/generator-xd-plugin",
   "author": {
