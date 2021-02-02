@@ -23,9 +23,6 @@ describe('generator-xd-plugin:app', () => {
         assert.file(['static/manifest.json']);
         assert.file(['static/images/icon@0.5x.png']);
         assert.file(['static/images/icon@1x.png']);
-        assert.file(['static/images/icon@2x.png']);
-        assert.file(['static/images/icon@3x.png']);
-        assert.file(['static/images/icon@4x.png']);
       });
   });
 
@@ -49,9 +46,6 @@ describe('generator-xd-plugin:app', () => {
         assert.file(['static/manifest.json']);
         assert.file(['static/images/icon@0.5x.png']);
         assert.file(['static/images/icon@1x.png']);
-        assert.file(['static/images/icon@2x.png']);
-        assert.file(['static/images/icon@3x.png']);
-        assert.file(['static/images/icon@4x.png']);
       });
   });
 
@@ -72,9 +66,6 @@ describe('generator-xd-plugin:app', () => {
         assert.file(['static/manifest.json']);
         assert.file(['static/images/icon@0.5x.png']);
         assert.file(['static/images/icon@1x.png']);
-        assert.file(['static/images/icon@2x.png']);
-        assert.file(['static/images/icon@3x.png']);
-        assert.file(['static/images/icon@4x.png']);
       });
   });
 
@@ -95,9 +86,6 @@ describe('generator-xd-plugin:app', () => {
         assert.file(['static/manifest.json']);
         assert.file(['static/images/icon@0.5x.png']);
         assert.file(['static/images/icon@1x.png']);
-        assert.file(['static/images/icon@2x.png']);
-        assert.file(['static/images/icon@3x.png']);
-        assert.file(['static/images/icon@4x.png']);
       });
   });
 });
