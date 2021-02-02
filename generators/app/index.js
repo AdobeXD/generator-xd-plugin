@@ -45,18 +45,18 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'name',
         message: 'What is Your XD plugin name?',
-        default: answers.projectDisplayName
+        default: answers.projectDisplayName,
       },
       {
         type: 'list',
         name: 'scriptType',
         message: 'Choose type of the plugin:',
-        choices: Object.values(answers.framework).map(x => x.dialog),
-        default: answers.framework.react
-      }
+        choices: Object.values(answers.framework).map((x) => x.dialog),
+        default: answers.framework.react,
+      },
     ];
 
-    return this.prompt(prompts).then(props => {
+    return this.prompt(prompts).then((props) => {
       // To access props later use this.props.someAnswer;
       this.props = props;
     });
@@ -71,11 +71,11 @@ module.exports = class extends Generator {
     const params = {
       name: this.props.name,
       i: uuid().substr(0, 8),
-      packageName: _.snakeCase(this.props.name)
+      packageName: _.snakeCase(this.props.name),
     };
 
     let framework = Object.entries(answers.framework).filter(
-      entries => entries[1].dialog === this.props.scriptType
+      (entries) => entries[1].dialog === this.props.scriptType
     )[0][1];
 
     this._copyAllFiles(params, framework.path);
@@ -85,7 +85,7 @@ module.exports = class extends Generator {
     this.installDependencies({
       npm: true,
       bower: false,
-      yarn: false
+      yarn: false,
     });
   }
 
